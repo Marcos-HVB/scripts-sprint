@@ -21,18 +21,20 @@ if [ $? -eq 0 ]
 			echo "$(tput setaf 10)[Bot assistant]:$(tput setaf 7)  Ok! Você escolheu instalar o Java ;D"
 			echo "$(tput setaf 10)[Bot assistant]:$(tput setaf 7)  Adicionando o repositório!"
 			sleep 2
-			sudo apt install default-jre -y
+			sudo add-apt-repository ppa:webupd8team/java -y
 			clear
-			sudo apt install default-jdk -y
 			echo "$(tput setaf 10)[Bot assistant]:$(tput setaf 7)  Atualizando! Quase lá."
 			sleep 2
 			sudo apt update -y
 			clear
+
+			sudo apt install openjdk-17-jdk
+
 			
 			if [ $VERSAO -eq 11 ]
 				then
 					echo "$(tput setaf 10)[Bot assistant]:$(tput setaf 7) Preparando para instalar a versão 11 do Java. Confirme a instalação quando solicitado ;D"
-					sudo apt install default-jre ; apt install openjdk-11-jre-headless; -y
+					sudo apt install default-jre ; apt install openjdk-17-jre-headless; -y
 					clear
 					echo "$(tput setaf 10)[Bot assistant]:$(tput setaf 7) Java instalado com sucesso!"
 				fi
