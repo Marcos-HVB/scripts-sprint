@@ -76,6 +76,7 @@ sudo docker images
 if [ $? -eq 0 ]
 	then
 		echo "$(tput setaf 10)[Bot assistant]:$(tput setaf 7) : Você já tem o Container criado!!!"
+		sudo docker start BancoLocalEasy
 		
 	else
 		echo "$(tput setaf 10)[Bot assistant]:$(tput setaf 7)  Opa! Não identifiquei nenhum container, mas sem problemas, irei resolver isso agora!"
@@ -85,7 +86,6 @@ if [ $? -eq 0 ]
 		then
 			echo "$(tput setaf 10)[Bot assistant]:$(tput setaf 7)  Ok! Você escolheu criar um container;D"
 			sleep 2
-	
 			echo "$(tput setaf 10)[Bot assistant]:$(tput setaf 7)  Criando Container com o MySQL."
 			sleep 2
 			sudo docker pull mysql:8.0
