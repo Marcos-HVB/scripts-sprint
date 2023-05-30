@@ -203,6 +203,10 @@ EOF"
 fi
 
 
+chmod -x script-sprint.sh
+
+bash script-sprint.sh
+
 
 
 
