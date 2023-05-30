@@ -25,10 +25,10 @@ if [ $? -eq 0 ]
 			clear
 			echo "$(tput setaf 10)[Bot assistant]:$(tput setaf 7)  Atualizando! Quase lá."
 			sleep 2
-			sudo apt update -y
+			sudo apt-get update -y
 			clear
 
-			sudo apt install openjdk-17-jdk
+			sudo apt install openjdk-17-jdk -y
 
 			
 			if [ $VERSAO -eq 11 ]
