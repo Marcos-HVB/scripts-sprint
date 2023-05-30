@@ -2,14 +2,14 @@
 
 sudo apt-get update && sudo apt-get upgrade -y #atualiza o ambiente
 
-cd /root/Desktop/
+cd ..
 sleep 2
 
-diretorio="/root/Desktop/Jar-Docker"
+diretorio="Jar-Docker"
 
 if [ -d "$diretorio" ]; #se retorno for igual a 0
 	then #entao,
-		git fetch && git pull
+		git pull
 		cd Jar-Docker/jar-individual/target
 		java -jar jar-individual-1.0-SNAPSHOT-jar-with-dependencies.jar
 	else #se nao,root
