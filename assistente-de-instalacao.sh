@@ -11,7 +11,7 @@ sleep 2
 java -version
 if [ $? -eq 0 ]
 	then
-		echo "$(tput setaf 10)[Bot assistant]:$(tput setaf 7) : Você já tem o java instalado!!!"
+		echo "$(tput setaf 10)[Bot assistant]:$(tput setaf 7) Você já tem o java instalado!!!"
 	else
 		echo "$(tput setaf 10)[Bot assistant]:$(tput setaf 7)  Opa! Não identifiquei nenhuma versão do Java instalado, mas sem problemas, irei resolver isso agora!"
 		echo "$(tput setaf 10)[Bot assistant]:$(tput setaf 7)  Confirme para mim se realmente deseja instalar o Java (S/N)?"
@@ -47,7 +47,7 @@ fi
 docker --version
 if [ $? -eq 0 ]
 	then
-		echo "$(tput setaf 10)[Bot assistant]:$(tput setaf 7) : Você já tem o Docker instalado!!!"
+		echo "$(tput setaf 10)[Bot assistant]:$(tput setaf 7) Você já tem o Docker instalado!!!"
 	else
 		echo "$(tput setaf 10)[Bot assistant]:$(tput setaf 7)  Opa! Não identifiquei nenhuma versão do Docker instalado, mas sem problemas, irei resolver isso agora!"
 		echo "$(tput setaf 10)[Bot assistant]:$(tput setaf 7)  Confirme para mim se realmente deseja instalar o Docker (S/N)?"
@@ -78,7 +78,7 @@ fi
 sudo docker images
 if [ $? -eq 0 ]
 	then
-		echo "$(tput setaf 10)[Bot assistant]:$(tput setaf 7) : Você já tem o Container criado!!!"
+		echo "$(tput setaf 10)[Bot assistant]:$(tput setaf 7) Você já tem o Container criado!!!"
 		sudo docker start BancoLocalEasy
 		
 	else
@@ -143,7 +143,7 @@ EOF"
 sudo docker-compose --version
 if [ $? -eq 0 ]
 	then
-		echo "$(tput setaf 10)[Bot assistant]:$(tput setaf 7) : Você já tem o Banco criado!!!"
+		echo "$(tput setaf 10)[Bot assistant]:$(tput setaf 7) Você já tem o Banco criado!!!"
 			clear
 			echo "$(tput setaf 10)[Bot assistant]:$(tput setaf 7)  Acessando container MySQL."
 			sudo docker exec -it BancoLocalEasy bash -c "$criacaoBanco"
