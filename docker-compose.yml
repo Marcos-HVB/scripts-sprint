@@ -1,0 +1,25 @@
+version: '3.8'
+
+services:
+  meuDB:
+    image: mysql:8.0
+    container_name: BancoLocalEasy
+    command: --default-authentication-plugin=mysql_native_password
+    environment:
+      MYSQL_ROOT_PASSWORD: urubu100
+      MYSQL_DATABASE: bd-projeto-easy 
+      MYSQL_USER: urubu100
+      MYSQL_PASSWORD: urubu100
+      MYSQL_ROOT_HOST: "%"
+    ports:
+      - "3307:3306"
+    networks:
+      app_net:
+        ipv4_address: 172.20.0.2
+
+networks:
+  app_net:
+    ipam:
+      driver: default
+      config:
+        - subnet: 172.20.0.0/16
