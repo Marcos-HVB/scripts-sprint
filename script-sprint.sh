@@ -1,8 +1,6 @@
 #!/bin/bash
 
-sudo apt-get update && sudo apt-get upgrade #atualiza o ambiente
-
--Y
+sudo apt-get update && sudo apt-get upgrade -y #atualiza o ambiente
 
 cd ..
 sleep 2
@@ -14,7 +12,7 @@ if [ $? = 0 ]; #se retorno for igual a 0
 		cd Jar-Docker/jar-individual/target
 		java -jar jar-individual-1.0-SNAPSHOT-jar-with-dependencies.jar
 
-	else #se nao,
+	else #se nao,root
 		git fetch && git pull
 		cd jar-individual/jar-individual/target
 		java -jar jar-individual-1.0-SNAPSHOT-jar-with-dependencies.jar
