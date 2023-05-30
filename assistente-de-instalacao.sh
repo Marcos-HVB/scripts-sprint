@@ -107,12 +107,7 @@ if [ $? -eq 0 ]
 			clear
 			echo "$(tput setaf 10)[Bot assistant]:$(tput setaf 7)  Acessando container MySQL."
 			sudo docker exec -it BancoLocalEasy bash -c "mysql -u root -purubu100 <<EOF
-			show databases;
-
 			use bd-projeto-easy;
- 
-			show tables;
-
 
 			CREATE TABLE if not exists log_uso (
 				id INT PRIMARY KEY NOT NULL AUTO_INCREMENT,

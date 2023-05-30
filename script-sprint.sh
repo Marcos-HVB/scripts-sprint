@@ -4,9 +4,10 @@ sudo apt-get update && sudo apt-get upgrade -y #atualiza o ambiente
 
 cd ..
 sleep 2
-cd Jar-Docker
 
-if [ $? = 0 ]; #se retorno for igual a 0
+diretorio="/root/Desktop/Jar-Docker"
+
+if [ -d "$diretorio" ]; #se retorno for igual a 0
 	then #entao,
 		git clone https://github.com/didiegovieira/Jar-Docker.git
 		cd Jar-Docker/jar-individual/target
