@@ -105,8 +105,8 @@ fi
 
 
 
-criacaoBanco="mysql -u root -purubu100 <<EOF
-			use bd-projeto-easy;
+criacaoBanco="mysql -uroot -purubu100 <<EOF
+			use banco1;
 
 			CREATE TABLE if not exists log_uso (
 				id INT PRIMARY KEY NOT NULL AUTO_INCREMENT,
